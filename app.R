@@ -6,7 +6,7 @@ library(leaflet)
 library(DT) 
 
 # Load study data
-studentinfo <- read.csv("data/studentinfo.csv")
+studentinfo <- read.csv("studentinfo.csv")
 
 
 
@@ -25,6 +25,7 @@ ui <- fluidPage(
        body { display: grid; margin:auto; background-color: #ebf3ff; font-family: 'Rock Salt', cursive;}
        .container-fluid { background-color: #ebfcf7; width: 1100px; padding: 15px; }
        .topimg { width: 120px; display: block; margin: 0px auto 40px auto; }
+       .bodimg{width: 450px; display: block; margin: 0px auto 40px auto;}
        .title { text-align: center; font-family: 'Rock Salt', cursive;}
        .toprow { display: block; margin:40;  padding: 3px; }
        .filters { padding: 3px; margin:30;display: block; padding: 15px}
@@ -67,11 +68,13 @@ ui <- fluidPage(
                 well=TRUE,
                 
                 tabPanel(class="tabs","About",
-                         h3("About Productivity Wiz"),
-                         p("Productivity Wiz is the solution for students who want to know the best location to study. It takes into account the student's location and the amount of time they are likely to spend studying. We use aggregated data about students' productivity in different locations to provide you with the best options."),
+                         h3("About Productivity Wiz")
+                         ,img(class = "bodimg", src = "https://i.ibb.co/gmXNhjH/abpa.png")
+                         
+                         ,p("Productivity Wiz is the solution for students who want to know the best location to study. It takes into account the student's location and the amount of time they are likely to spend studying. We use aggregated data about students' productivity in different locations to provide you with the best options."),
                          p("The results are displayed in a bar chart, so students can choose the location that is best for them.The bar chart is helpful because it allows students to see at a glance which locations are the most productive for studying. It also makes it easy to compare different locations."),
                          h2("How to use the app"),
-                         p("1. Scroll down to the interactive part of the app."),
+                         p("1. Go to the interactive part of the app. In the Interact tab."),
                          p("2. Select a major from the drop down menu to find the top 5 locations for studying in Grinnell College based on your major."),
                          p("3. Scroll down below the major chart. Select a class year from the drop down menu to find the top 5 locations for studying in Grinnell College based on your class year"),
                 ),
@@ -88,6 +91,7 @@ ui <- fluidPage(
                 ),
                 tabPanel(class="tabs","Design"
                          ,h3("The Design Process")
+                         ,img(class="bodimg", src="https://i.ibb.co/17f3t6Q/34.png")
                          ,p("The textbooks suggested by the professor helped me design Productivity Wiz by providing a clear understanding of what web app design is and how to create a process that will respond to user needs. It was helpful in informing the design of the app because it helped me understand how to design a system that would be easy to use and understand.
                   Some examples of how I made sure my app has good design include:
                   -Making sure the app is easy to use and understand
@@ -96,8 +100,11 @@ ui <- fluidPage(
                   -Ensuring performance across multiple devices")
                          ,p("When designing this web app, there are a few key things I kept in mind in order to create an effective design. First, I thought about who will be using the app and what their needs are. I considered the overall goals of the app and how it will stand out from other similar products. Additionally, I focused on creating a minimal, responsive and intuitive user interface, as well as ensuring that the app performs well across multiple devices. Finally, I made sure to offer some offline functionality in the app so that users can still use the Learn page of the app even if they do not have a strong internet connection.")
                          ,p("The app design process involved making a wireframe of key features and then a mockup.")
-                         ,p("The mockup was not entirely translated into the app because I wanted to display the interactive part of the app as a separate area in the app rather than a  alongside the educational tabs of the app. I did not want users who are more hands-on learners to be bogged down by the guides and details if they wanted to skip that and just interact with the app. Since interacting with the app is really easy, I wanted to make sure that as the user is reading the About page or the Design page, they can test out and engage with the app by switching easily.")
-                         
+                
+                         ,img(class="bodimg",src="https://i.ibb.co/5B9cZJn/3.png")
+                         ,p("The mockup was not entirely translated into the app. I decided to make two bar charts by major and class year.  I wanted to display the interactive part of the app as a separate area in the app rather than a  alongside the educational tabs of the app. I did not want users who are more hands-on learners to be bogged down by the guides and details if they wanted to skip that and just interact with the app. Since interacting with the app is really easy, I wanted to make sure that as the user is reading the About page or the Design page, they can test out and engage with the app by switching easily.")
+                         ,img(class="bodimg", src="https://i.ibb.co/GvhVH3V/4.png")
+                         ,p("The changes from the mockup make the app more user-friednly and fit my users' needs best. I wanted students to be able to sort by class year rather than location as the second filter. I felt that the map was unnecessary. Since Grinnell is small, the map would not really help students to locate the study spots.")
                 ))),
               tabPanel("Interact", h3("Explore study spots"),
                        fluidRow(class = "toprow",
