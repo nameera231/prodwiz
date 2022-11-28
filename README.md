@@ -19,7 +19,7 @@ How to use the app
 
 Requirements: You should have the app downloaded and running.
 
-1. Scroll down to the interactive part of the app.
+1. Go to the interactive part of the app. In the Interact tab.
 
 2. Select a major from the drop down menu to find the top 5 locations for studying in Grinnell College based on your major.
 
