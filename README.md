@@ -1,6 +1,6 @@
-# prodwiz
+# About Productivity Wiz
 
-About Productivity Wiz
+
 Productivity Wiz is the solution for students who want to know the best location to study. It takes into account the student's location and the amount of time they are likely to spend studying. We use aggregated data about students' productivity in different locations to provide you with the best options.
 
 The results are displayed in a bar chart, so students can choose the location that is best for them.The bar chart is helpful because it allows students to see at a glance which locations are the most productive for studying. It also makes it easy to compare different locations.
